@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp11.MessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:tz="http://schemas.abtsoftware.co.uk/transitionz"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp11"
+        mc:Ignorable="d"
+        Title="" Height="250" Width="400" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" UseLayoutRounding="True" Background="Transparent" Left="1250" Top="303" AllowsTransparency="True">
+    <Grid SnapsToDevicePixels="True" tz:Transitionz.Opacity="{tz:OpacityParams Duration=1200, From=0, To=1, TransitionOn=Loaded}" tz:Transitionz.Blur="{tz:BlurParams Duration=1200, From=20, To=0, TransitionOn=Loaded}">
+        <Rectangle Fill="#FF343434" Margin="10" materialDesign:ShadowAssist.ShadowDepth="Depth5" materialDesign:ShadowAssist.ShadowEdges="All">
+            <Rectangle.Effect>
+                <DropShadowEffect ShadowDepth="2" BlurRadius="15" RenderingBias="Quality" RenderOptions.BitmapScalingMode="HighQuality"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Rectangle Fill="#FFC1C1C1" x:Name="msgWindowBar" Width="380" Height="34" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,0" MouseLeftButtonDown="msgWindowBar_MouseLeftButtonDown"></Rectangle>
+        <Button x:Name="btnMsgMin" Background="#FF5EFF6E" BorderBrush="{x:Null}" Width="20" Height="20" materialDesign:ButtonAssist.CornerRadius="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,52,0" Click="btnMsgMin_Click"></Button>
+        <Button x:Name="btnMsgClose" Background="#FF6A6A" BorderBrush="{x:Null}" Width="20" Height="20" materialDesign:ButtonAssist.CornerRadius="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,19,0" Click="btnMsgClose_Click"></Button>
+        <Label x:Name="convertedResult" FontFamily="Ubuntu" FontWeight="Thin" FontSize="20" Foreground="#FFC1C1C1" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+        <Button x:Name="btnMsgAgain" FontFamily="Ubuntu" FontWeight="Thin" FontSize="19" Background="#FFC1C1C1" Content="Újra" Height="40" Width="100" materialDesign:ButtonAssist.CornerRadius="12" materialDesign:ShadowAssist.ShadowDepth="Depth0" BorderThickness="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" BorderBrush="#FFCFCFCF" UseLayoutRounding="True" SnapsToDevicePixels="True" Foreground="#FF707070" Margin="60,0,240,35" Click="btnMsgAgain_Click"></Button>
+        <Button x:Name="btnMsgExit" FontFamily="Ubuntu" FontWeight="Thin" FontSize="19" Background="#FFC1C1C1" Content="Kilépés" Height="40" Width="100" materialDesign:ButtonAssist.CornerRadius="12" materialDesign:ShadowAssist.ShadowDepth="Depth0" BorderThickness="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" BorderBrush="#FFCFCFCF" UseLayoutRounding="True" SnapsToDevicePixels="True" Foreground="#FF707070" Margin="240,0,60,35" Click="btnMsgExit_Click"></Button>
+    </Grid>
+</Window>
