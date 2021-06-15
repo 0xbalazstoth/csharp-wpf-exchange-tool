@@ -1,2 +1,6 @@
-# csharp_wpf_exchange-tool
- GUI Exchange tool
+# GUI Exchange tool
+ Exchange between currencies
+
+## How does it look like and how it works?
+
+![](tool.gif)
